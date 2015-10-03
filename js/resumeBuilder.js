@@ -1,8 +1,9 @@
+//JSON containing my Biographical info
 var bio = {
 	'name' : 'Simon Parks',
 	'role' : 'Front End Web Developer',
 	'contacts' : {
-		'mobile' : '0798 397 2886',
+		'mobile' : '0123 456 7899',
 		'email' : 'simoncparks@googlemail.com',
 		'github' : 'simoncparks',
 		'twitter' : '@simoncparks',
@@ -13,8 +14,7 @@ var bio = {
 	'bioPic' : 'images/Me.jpg'
 };
 
-
-
+//Adding a display function to my Biography
 bio.display = function () {
 		var formattedName = HTMLheaderName.replace('%data%', this.name);
 		var formattedRole = HTMLheaderRole.replace('%data%', this.role);
@@ -46,8 +46,10 @@ bio.display = function () {
 		$('#footerContacts').append(formattedLocation);
 }
 
+//Calling the Biography display function
 bio.display();
 
+//JSON containing my Educational info
 var education = {
 	'schools' : [
 		{
@@ -77,8 +79,7 @@ var education = {
 	]
 };
 
-
-
+//Adding a display function to my Education
 education.display = function (){
 	$('#education').append(HTMLschoolStart);
 	for(var schools in this.schools){
@@ -103,8 +104,10 @@ education.display = function (){
 	}
 }
 
+//Calling the Education display function
 education.display();
 
+//JSON containing my Work info
 var work = {
 	'jobs' : [
 		{
@@ -127,8 +130,7 @@ var work = {
 	]
 };
 
-
-
+//Adding a display function to my Work
 work.display = function () {
 	for (var myjobs in work.jobs){
 		$('#workExperience').append(HTMLworkStart);
@@ -148,8 +150,10 @@ work.display = function () {
 	}
 }
 
+//Calling the Work display function
 work.display();
 
+//JSON containing my Projects info
 var projects = {
 	'projects' : [
 		{
@@ -167,8 +171,7 @@ var projects = {
 	]
 };
 
-
-
+//Adding a display function to my Project
 projects.display = function (){
 
 	for (project in projects.projects){
@@ -193,6 +196,8 @@ projects.display = function (){
 	}
 }
 
+//Calling the Projects display function
 projects.display();
 
+//Adding the Google Map
 $('#mapDiv').append(googleMap);
